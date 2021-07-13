@@ -1,10 +1,51 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+/*----------------------
+   header styles
+   ------------------------- */
+header {
+  background-color: #562eff;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+.logo-info {
+  display: flex;
+  align-items: center;
+}
+.logo-info img {
+  width: 40px;
+  height: 51px;
+  padding-right: 15px;
+}
+.logo-title {
+  font-size: 24px;
+}
+.nav-info {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding-right: 36px;
+}
 
-/* base styles or utilities */
+/*---------------------
+ base styles or utilities
+ --------------------------------- */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f3f1ff;
+  margin: 0%;
 }
 main {
   display: flex;
@@ -144,27 +185,62 @@ hr {
   border-radius: 15px;
   padding: 5px 10px;
 }
+/*---------------- 
+  footer styles
+ -----------------*/
+footer {
+  background-color: #562eff;
+  margin-top: 21px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px 0px;
+}
+footer p {
+  color: #ffffff;
+}
+footer a {
+  text-decoration: none;
+  color: #d1d1d1;
+  font-size: 16px;
+}
+footer img {
+  width: 50px;
+}
+
 /* ------------------
     media queries
  ---------------------- */
+
 @media only screen and (max-width: 668px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .container {
     width: 100%;
   }
   .players,
   .blogs,
-  .courses {
+  .courses,
+  .footer {
     grid-template-columns: repeat(1, 1fr);
   }
   .player,
-  .blog {
+  .blog,
+  .footer {
     /* justify-content: center; */
     flex-direction: column;
   }
 }
 /* tab devices */
 @media only screen and (min-width: 668px) and (max-width: 992px) {
-  .container {
+  .container,
+  .header,
+  .footer {
     width: 100%;
   }
   .players,
@@ -172,7 +248,8 @@ hr {
   .courses {
     grid-template-columns: repeat(2, 1fr);
   }
-  .blogs {
+  .blogs,
+  .footer {
     grid-template-columns: repeat(1, 1fr);
   }
 }
